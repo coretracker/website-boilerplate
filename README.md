@@ -2,6 +2,7 @@
 
 ### Requirements
 * Nodejs
+* Livereload (https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 
 ### Installation
 * npm install
