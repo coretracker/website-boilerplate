@@ -8,6 +8,7 @@
 * npm install -g http-server
 
 ### Starting
+* gulp watch in root dir
 * join dist directory
 * http-server
 
