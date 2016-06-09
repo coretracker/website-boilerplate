@@ -1,7 +1,7 @@
 @include block('hello-word') {
 
 	@include modifier('default') {
-		font-size: 12px
+		font-size: 16px
 	}
 
 }

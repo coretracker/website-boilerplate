@@ -43,13 +43,12 @@ gulp.task('sass', function () {
         noCache: true,
         sourcemap: false
     })
-        .pipe(sourcemaps.init())
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(PATHS.CSS))
         .pipe(bulkSass())
         .pipe(cssnano({zindex: false}))
         .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init())
         .pipe(gulp.dest(PATHS.CSS))     
         .pipe(livereload());
 

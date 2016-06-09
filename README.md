@@ -17,3 +17,6 @@ Website Boilerplate helps you build fast, robust, websites with newest technolog
 ### Links
 * https://franzheidl.github.io/bemify/
 * http://gridle.org/
+* https://babeljs.io/
+* https://github.com/joshbuchea/HEAD
+* https://davidwalsh.name/retina-favicons
