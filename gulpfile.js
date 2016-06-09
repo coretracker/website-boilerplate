@@ -61,7 +61,8 @@ gulp.task("babel", function () {
     .pipe(babel())
     .pipe(concat("application.js"))
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(PATHS.JS));
+    .pipe(gulp.dest(PATHS.JS))
+    .pipe(livereload());
 });
 
 gulp.task('compress-images', function () {

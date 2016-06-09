@@ -1,0 +1,20 @@
+// setting up the grid
+@include gridle_setup( (
+    context : 12,
+    gutter-width : 20px,
+    direction : ltr,
+) );
+
+// make the use of media queries really easy
+@include gridle_register_state ( mobile , (
+    max-width : 480px 
+) );
+@include gridle_register_state ( tablet , (
+    min-width : 481px,
+    max-width : 1024px
+) ) ;
+
+// even with full custom queries :
+@include gridle_register_state ( landscape, (
+    query : "(orientation : landscape)"
+) );
