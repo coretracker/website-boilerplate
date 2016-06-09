@@ -1,5 +1,5 @@
 # Website Boilerplate
-Website Boilerplate helps you build fast, robust, websites with newest technologie.
+Website Boilerplate helps you build fast, robust, websites in no time.
 
 ### Requirements
 * Nodejs
