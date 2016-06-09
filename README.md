@@ -5,6 +5,14 @@ Website Boilerplate helps you build fast, robust, websites in no time.
 * Nodejs
 * Livereload (https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 
+### Included
+* gulp
+* sass
+* babel (es2015, react)
+* image compression
+* handlebars
+* livereload
+
 ### Installation
 * npm install
 * npm install -g http-server
