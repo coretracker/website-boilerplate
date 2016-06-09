@@ -1,0 +1,1 @@
+{"version":3,"sources":["helloworld.js"],"names":[],"mappings":";;AAAA,SAAS,MAAT,CACE;AAAA;EAAA;EAAA;AAAA,CADF,EAEE,SAAS,cAAT,CAAwB,SAAxB,CAFF","file":"application.js","sourcesContent":["ReactDOM.render(\n  <h1>Hello, world!</h1>,\n  document.getElementById('example')\n);"],"sourceRoot":"/source/"}

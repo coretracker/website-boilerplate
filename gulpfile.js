@@ -13,7 +13,8 @@ var gulp = require('gulp'),
     bulkSass = require('gulp-sass-bulk-import'),
     ts = require('gulp-typescript'),
     imagemin = require('gulp-imagemin'),
-    handlebars = require('gulp-compile-handlebars');
+    handlebars = require('gulp-compile-handlebars'),
+    babel = require("gulp-babel")
 
 var PATHS = {
     CSS: 'dist/assets/css',
@@ -21,7 +22,7 @@ var PATHS = {
     IMGDIST: 'dist/assets/img',
     IMGSRC: 'src/assets/img',
     JS: 'dist/assets/js',
-    TYPESCRIPT: 'src/assets/typescript',
+    ES6: 'src/assets/javascript',
     HTML: 'dist',
     HANDLEBARS: 'src/templates',
 };
@@ -42,6 +43,7 @@ gulp.task('sass', function () {
         noCache: true,
         sourcemap: false
     })
+        .pipe(sourcemaps.init())
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(PATHS.CSS))
         .pipe(bulkSass())
@@ -53,16 +55,13 @@ gulp.task('sass', function () {
 
 });
 
-gulp.task('typescript', function () {
-    return gulp.src(PATHS.TYPESCRIPT+'/**/*.ts')
-        .pipe(ts({
-            noImplicitAny: true,
-            out: 'application.js',
-            sourceMap: true,
-            "removeComments": true
-        }))
-        .pipe(gulp.dest(PATHS.JS))
-        .pipe(livereload());
+gulp.task("babel", function () {
+  return gulp.src(PATHS.ES6+"/**/*.js")
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(concat("application.js"))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest(PATHS.JS));
 });
 
 gulp.task('compress-images', function () {
@@ -92,7 +91,7 @@ gulp.task('handlebars', function(){
 gulp.task('watch', function () {
     livereload.listen();
     gulp.watch([PATHS.SASS + "/**/*.sass", PATHS.SASS + "/**/*.scss"], ['sass']);
-    gulp.watch([PATHS.TYPESCRIPT + "/**/*.ts"], ['typescript']);
+    gulp.watch([PATHS.ES6 + "/**/*.js"], ['babel']);
     gulp.watch([PATHS.IMGSRC + "/**/*.{jpg,png}"], ['compress-images']);
     gulp.watch([PATHS.HANDLEBARS + "/**/*.hbs"], ['handlebars']);
 });

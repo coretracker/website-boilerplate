@@ -35,7 +35,11 @@
     "livereload": "^0.4.1"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
     "bemify": "^0.1.2",
-    "gulp-compile-handlebars": "^0.6.1"
+    "gulp-babel": "^6.1.2",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-ruby-sass": "^2.0.6"
   }
 }

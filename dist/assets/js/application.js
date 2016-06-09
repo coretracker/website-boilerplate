@@ -1,6 +1,8 @@
-var helloworld = (function () {
-    function helloworld() {
-        console.log('Hello World!');
-    }
-    return helloworld;
-}());
+'use strict';
+
+ReactDOM.render(React.createElement(
+  'h1',
+  null,
+  'Hello, world!'
+), document.getElementById('example'));
+//# sourceMappingURL=application.js.map
