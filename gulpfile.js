@@ -15,7 +15,10 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     handlebars = require('gulp-compile-handlebars'),
     babel = require("gulp-babel"),
-    twig = require('gulp-twig');
+    twig = require('gulp-twig'),
+    data = require('gulp-data'),
+    path = require('path'),
+    fs = require('fs');
 
 var PATHS = {
     CSS: 'dist/assets/css',
@@ -25,7 +28,8 @@ var PATHS = {
     JS: 'dist/assets/js',
     ES6: 'src/assets/javascript',
     HTML: 'dist',
-    TWIG: 'src/templates'
+    TWIG: 'src/templates',
+    DATA: 'src/data'
 };
 
 var autoprefixerOptions = {
@@ -75,11 +79,17 @@ gulp.task('compress-images', function () {
 
 gulp.task('twig', function () {
     return gulp.src(PATHS.TWIG+'/*.twig')
-        .pipe(twig({
-            data: {
-                title: 'Gulp and Twig',
-            }
+        .pipe(data(function(file) {
+            var file =  path.basename(file.path);
+            var filename = file.substr(0,file.lastIndexOf('.'))
+            var filePath = './'+PATHS.DATA+'/'+filename+'.json';
+            fs.stat(filePath, function(err, stat) {
+                if(err == null) {
+                    return require(filePath);
+                } 
+            }); 
         }))
+        .pipe(twig())
         .pipe(gulp.dest(PATHS.HTML))
         .pipe(livereload());
 });
@@ -89,5 +99,5 @@ gulp.task('watch', function () {
     gulp.watch([PATHS.SASS + "/**/*.sass", PATHS.SASS + "/**/*.scss"], ['sass']);
     gulp.watch([PATHS.ES6 + "/**/*.js"], ['babel']);
     gulp.watch([PATHS.IMGSRC + "/**/*.{jpg,png}"], ['compress-images']);
-    gulp.watch([PATHS.TWIG + "/**/*.twig"], ['twig']);
+    gulp.watch([PATHS.TWIG + "/**/*.twig", PATHS.DATA + "/**/*.json"], ['twig']);
 });
