@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,23 +23,50 @@
 	<meta name="google" content="notranslate">
 
 	<!-- Prefetching, preloading, prebrowsing -->
+	<link rel="dns-prefetch" href="//example.com/">
+	<link rel="preconnect" href="https://www.example.com/">
+	<link rel="prefetch" href="https://www.example.com/">
+	<link rel="prerender" href="https://example.com/">
 
 	<!-- For IE 10 and below -->
 	<!-- No link, just place a file called favicon.ico in the root directory -->
 
 	<!-- For IE 11, Chrome, Firefox, Safari, Opera -->
+	<link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="path/to/favicon-32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
+	<link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
+	<link rel="icon" href="path/to/favicon-192.png" sizes="192x192" type="image/png">
 	<!-- More info: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
 
 	<!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup -->
 	<!-- Open Graph: http://ogp.me/ -->
+	<meta property="fb:app_id" content="123456789">
+	<meta property="og:url" content="https://example.com/page.html">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Content Title">
+	<meta property="og:image" content="https://example.com/image.jpg">
+	<meta property="og:description" content="Description Here">
+	<meta property="og:site_name" content="Site Name">
+	<meta property="og:locale" content="en_US">
+	<meta property="article:author" content="">
 
 	<!-- More info: https://dev.twitter.com/cards/getting-started -->
 	<!-- Validate: https://dev.twitter.com/docs/cards/validation/validator -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@site_account">
+	<meta name="twitter:creator" content="@individual_account">
+	<meta name="twitter:url" content="https://example.com/page.html">
+	<meta name="twitter:title" content="Content Title">
+	<meta name="twitter:description" content="Content description less than 200 characters">
+	<meta name="twitter:image" content="https://example.com/image.jpg">
 
-	<title>Document</title>
+	<title>Gulp and Twig</title>
 	<link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
-<body> 	<div class="container">
+<body> 
+
+        <div class="container">
 		<div class="gr-12">
 			<h1 class="hello-word--default">EXAMPLE</h1>
 		</div>
@@ -51,6 +79,8 @@
 	</div>
 	
 	<div id="example"></div>
+
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
 	<script src="assets/js/application.js"></script>

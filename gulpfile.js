@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     ts = require('gulp-typescript'),
     imagemin = require('gulp-imagemin'),
     handlebars = require('gulp-compile-handlebars'),
-    babel = require("gulp-babel")
+    babel = require("gulp-babel"),
+    twig = require('gulp-twig');
 
 var PATHS = {
     CSS: 'dist/assets/css',
@@ -24,8 +25,9 @@ var PATHS = {
     JS: 'dist/assets/js',
     ES6: 'src/assets/javascript',
     HTML: 'dist',
-    HANDLEBARS: 'src/templates',
+    TWIG: 'src/templates'
 };
+
 var autoprefixerOptions = {
     browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
 };
@@ -71,19 +73,13 @@ gulp.task('compress-images', function () {
         .pipe(livereload());
 });
 
-gulp.task('handlebars', function(){
-    options = {
-        ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false 
-        batch : [PATHS.HANDLEBARS+'/partials'],
-        helpers : {
-            capitals : function(str){
-                return str.toUpperCase();
+gulp.task('twig', function () {
+    return gulp.src(PATHS.TWIG+'/*.twig')
+        .pipe(twig({
+            data: {
+                title: 'Gulp and Twig',
             }
-        }
-    }
-    return gulp.src(PATHS.HANDLEBARS+'/**/*.hbs')
-        .pipe(handlebars({}, options))
-        .pipe(rename({extname:'.html'}))
+        }))
         .pipe(gulp.dest(PATHS.HTML))
         .pipe(livereload());
 });
@@ -93,5 +89,5 @@ gulp.task('watch', function () {
     gulp.watch([PATHS.SASS + "/**/*.sass", PATHS.SASS + "/**/*.scss"], ['sass']);
     gulp.watch([PATHS.ES6 + "/**/*.js"], ['babel']);
     gulp.watch([PATHS.IMGSRC + "/**/*.{jpg,png}"], ['compress-images']);
-    gulp.watch([PATHS.HANDLEBARS + "/**/*.hbs"], ['handlebars']);
+    gulp.watch([PATHS.TWIG + "/**/*.twig"], ['twig']);
 });
