@@ -7,11 +7,14 @@ Create Static Websites in no time.
 
 ### Included
 * gulp
+* gulp-data
 * sass
+* griddle
 * babel (es2015, react)
 * image compression
 * twig
 * livereload
+
 
 ### Installation
 * npm install
@@ -29,6 +32,7 @@ Create Static Websites in no time.
 * https://github.com/joshbuchea/HEAD
 * https://davidwalsh.name/retina-favicons
 * https://github.com/twigjs/twig.js
+* https://www.npmjs.com/package/gulp-data
 
 ## License
 
