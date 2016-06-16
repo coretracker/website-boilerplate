@@ -10,7 +10,7 @@ Create Static Websites in no time.
 * sass
 * babel (es2015, react)
 * image compression
-* handlebars
+* twig
 * livereload
 
 ### Installation
@@ -28,6 +28,7 @@ Create Static Websites in no time.
 * https://babeljs.io/
 * https://github.com/joshbuchea/HEAD
 * https://davidwalsh.name/retina-favicons
+* https://github.com/twigjs/twig.js
 
 ## License
 
