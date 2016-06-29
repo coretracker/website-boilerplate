@@ -1,0 +1,25 @@
+$i: 0; 
+@while $i < 100 { 
+    $i: $i + 5; 
+    .m-#{$i} { margin: 1px * $i; }
+}
+
+$i: 0; 
+@while $i < 100 { 
+    $i: $i + 5; 
+    .mt-#{$i} { margin-top: 1px * $i; }
+}
+
+$i: 0; 
+@while $i < 100 { 
+    $i: $i + 5; 
+    .mb-#{$i} { margin-bottom: 1px * $i; }
+}
+
+.mb-none {
+    margin-bottom: 0;
+}
+
+.mt-none {
+    margin-top: 0;
+}

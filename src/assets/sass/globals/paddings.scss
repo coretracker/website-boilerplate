@@ -1,0 +1,25 @@
+$i: 0; 
+@while $i < 100 { 
+    $i: $i + 5; 
+    .p-#{$i} { padding: 1px * $i; }
+}
+
+$i: 0; 
+@while $i < 100 { 
+    $i: $i + 5; 
+    .pt-#{$i} { padding-top: 1px * $i; }
+}
+
+$i: 0; 
+@while $i < 100 { 
+    $i: $i + 5; 
+    .pb-#{$i} { padding-bottom: 1px * $i; }
+}
+
+.pb-none {
+    padding-bottom: 0;
+}
+
+.pt-none {
+    padding-top: 0;
+}
