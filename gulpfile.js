@@ -73,7 +73,7 @@ gulp.task("babel", function () {
 gulp.task('compress-images', function () {
     return gulp.src(PATHS.IMGSRC + '/**/*.{jpg,png}')
         .pipe(imagemin())
-        .pipe(gulp.dest(PATHS.DEST))
+        .pipe(gulp.dest(PATHS.IMGDIST))
         .pipe(livereload());
 });
 
