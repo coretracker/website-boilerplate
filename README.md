@@ -3,36 +3,26 @@ Create Static Websites in no time.
 
 ### Requirements
 * Nodejs
-* Livereload (https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+* yarn
 
 ### Included
-* gulp
-* gulp-data
 * sass
-* griddle
+* gridle
 * babel (es2015, react)
-* image compression
-* twig
-* livereload
+* webpack
 
 
 ### Installation
-* npm install
-* npm install -g http-server
+* yarn install
 
 ### Starting
-* gulp watch in root dir
-* join dist directory
-* http-server
+* npm run start
+* Open "http://localhost:8080/#/" in browser
 
-### Links
-* https://franzheidl.github.io/bemify/
+### Websites
 * http://gridle.org/
 * https://babeljs.io/
-* https://github.com/joshbuchea/HEAD
-* https://davidwalsh.name/retina-favicons
-* https://github.com/twigjs/twig.js
-* https://www.npmjs.com/package/gulp-data
+* https://webpack.github.io/docs/
 
 ## License
 

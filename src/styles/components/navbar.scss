@@ -1,0 +1,23 @@
+.navbar {
+  background: #fff;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: table;
+    height: 64px;
+    li {
+      position: relative;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .menu {
+    li {
+      a {
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
+}

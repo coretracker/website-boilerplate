@@ -7,7 +7,7 @@ import {Router, Route, hashHistory} from 'react-router'
 import style from '../styles/styles.scss';
 
 // Compontents
-import home from './components/home.jsx';
+import home from './pages/home.jsx';
 
 
 render((

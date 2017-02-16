@@ -1,8 +1,13 @@
+/* Grid */
 @import "../../node_modules/gridle/sass/gridle/gridle";
-
 @import "grid/grid";
-@import "globals/typo";
 
-body {
-  background: red;
-}
+/* Gobals */
+@import "globals/helpers";
+@import "globals/margins";
+@import "globals/paddings";
+@import "globals/typo";
+@import "globals/body";
+
+/* Compontens */
+@import "components/navbar";
