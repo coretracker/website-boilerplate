@@ -2,7 +2,8 @@
 @import 'settings';
 
 // generate classes :
-@include gridle_generate_classes ( );
+@include gridle_setup(());
+@include gridle_init();
 
 // manage container width :
 .container {

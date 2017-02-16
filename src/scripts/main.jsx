@@ -1,4 +1,19 @@
+// Core
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom'
+import {Router, Route, hashHistory} from 'react-router'
 
-ReactDOM.render(<h1 class="title">Hello World</h1>, document.getElementById('example'));
+// Styles
+import style from '../styles/styles.scss';
+
+// Compontents
+import home from './components/home.jsx';
+
+
+render((
+    <div>
+        <Router history={hashHistory}>
+            <Route path="/" component={home}/>
+        </Router>
+    </div>
+), document.getElementById('app'))

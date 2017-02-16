@@ -116,3 +116,9 @@ fabric.properties
 # *.ipr
 
 # End of https://www.gitignore.io/api/phpstorm,node
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/website-boilerplate.iml
+.idea/copyright/profiles_settings.xml
