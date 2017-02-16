@@ -20,6 +20,9 @@ export default class navbar extends React.Component {
                             <li>
                                 <a href="/#/">Welcome</a>
                             </li>
+                            <li>
+                                <a href="/#/blog">Blog</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
