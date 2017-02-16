@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import Navbar from '../components/navbar.jsx'
+import Button from '../components/button.jsx'
 
 export default class home extends React.Component {
 
@@ -16,6 +17,9 @@ export default class home extends React.Component {
                 <div className="gr-12">
                     Bacon ipsum dolor sit amet short loin ad sirloin minim sed laborum pork. <br/>
                     Sunt qui brisket ad, fugiat sirloin ham hock ut eiusmod pancetta in biltong pastrami quis.
+                    <div className="mt-30">
+                        <Button href="https://github.com/coretracker/website-boilerplate" target="_blank">Github</Button>
+                    </div>
                 </div>
             </div>
         </section>

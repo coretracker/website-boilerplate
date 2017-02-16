@@ -18,10 +18,7 @@ export default class navbar extends React.Component {
                     <div className="gr-8">
                         <ul className="pull-right menu">
                             <li>
-                                <a href="#">Welcome</a>
-                            </li>
-                            <li>
-                                <a href="#">Navbar</a>
+                                <a href="/#/">Welcome</a>
                             </li>
                         </ul>
                     </div>
