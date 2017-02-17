@@ -41,6 +41,8 @@ export default class blog extends React.Component {
         return <section>
             <Navbar />
             <div className="container text-center mt-40">
+                <h1>Blog</h1>
+
                 {this.state.posts.map(function (entry) {
                     return (<div key={entry.sys.id}><Post entry={entry} /></div>)
                 })}

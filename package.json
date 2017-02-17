@@ -35,9 +35,7 @@
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.5.0",
-    "bin-version-check": "^3.0.0",
     "css-loader": "^0.26.1",
-    "opn": "^4.0.2",
     "sass-loader": "^5.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
@@ -45,7 +43,7 @@
   },
   "scripts": {
     "start": "node server",
-    "watch": "./node_modules/.bin/webpack-dev-server --hot --inline --port 5000",
+    "watch": "./node_modules/.bin/webpack-dev-server --hot --inline --port 8080",
     "build": "./node_modules/.bin/webpack",
     "test": "chmod +x tests/build && tests/build",
     "heroku-postbuild": "./node_modules/.bin/webpack"
