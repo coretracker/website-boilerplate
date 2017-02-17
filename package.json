@@ -46,6 +46,6 @@
     "start": "./node_modules/.bin/webpack-dev-server --hot --inline --port 5000",
     "build": "./node_modules/.bin/webpack",
     "test": "chmod +x tests/build && tests/build",
-    "heroku-postbuild": "npm run start"
+    "heroku-postbuild": "node server.js"
   }
 }
