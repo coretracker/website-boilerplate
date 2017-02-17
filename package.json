@@ -41,7 +41,7 @@
     "webpack-dev-server": "^2.3.0"
   },
   "scripts": {
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --port 5000 --https",
     "build": "./node_modules/webpack/bin/webpack.js",
     "test": "chmod +x tests/build && tests/build"
   }
