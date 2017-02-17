@@ -39,6 +39,7 @@
   },
   "scripts": {
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline",
-    "build": "./node_modules/webpack/bin/webpack.js --production"
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "test": "chmod +x tests/build && tests/build"
   }
 }

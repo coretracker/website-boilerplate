@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nodeversion=$(node -v)
+echo "Nodejs Version: $nodeversion"
+npm run build
