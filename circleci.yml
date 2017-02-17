@@ -1,0 +1,17 @@
+## Customize dependencies
+dependencies:
+  override:
+    - yarn
+
+
+## Customize test commands
+test:
+  override:
+    - yarn test
+
+## Customize deployment commands
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: foo-bar-123
