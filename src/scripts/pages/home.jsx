@@ -11,14 +11,15 @@ export default class home extends React.Component {
             <Navbar />
             <div className="container text-center mt-40">
                 <div className="gr-12">
-                   <h1>Welcome</h1>
-                    <h3>Thanks for using Website Boilerplate</h3>
+                    <h1>Welcome</h1>
+                    <h3><i className="im im-check-square-o"></i>&nbsp;Successfully installed!</h3>
                 </div>
                 <div className="gr-12">
                     Bacon ipsum dolor sit amet short loin ad sirloin minim sed laborum pork. <br/>
                     Sunt qui brisket ad, fugiat sirloin ham hock ut eiusmod pancetta in biltong pastrami quis.
                     <div className="mt-30">
-                        <Button href="https://github.com/coretracker/website-boilerplate" target="_blank">Github</Button>
+                        <Button href="https://github.com/coretracker/website-boilerplate"
+                                target="_blank">Github</Button>
                     </div>
                 </div>
             </div>
