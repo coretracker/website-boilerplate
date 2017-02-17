@@ -1,8 +1,11 @@
 # Website Boilerplate 
 Create Static Websites in no time.
 
-Build status: [![CircleCI](https://circleci.com/gh/coretracker/website-boilerplate.svg?style=svg)](https://circleci.com/gh/coretracker/website-boilerplate)
+###Build status: 
+* [![CircleCI](https://circleci.com/gh/coretracker/website-boilerplate.svg?style=svg)](https://circleci.com/gh/coretracker/website-boilerplate)
 
+### Demo:
+* https://website-boilerplate.herokuapp.com
 
 ### Requirements
 * Nodejs
