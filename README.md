@@ -21,6 +21,9 @@ Create Static Websites in no time.
 ### Installation
 * yarn install
 
+### Video-Tutorials
+* [Setup](https://www.youtube.com/watch?v=HiTn8-_EguI&feature=youtu.be)
+
 ### Starting
 * npm run start
 * Open "http://localhost:8080/#/" in browser
